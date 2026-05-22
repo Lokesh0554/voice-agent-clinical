@@ -1,0 +1,65 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 792 612] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1015 >>
+stream
+BT
+/F1 18 Tf
+60 560 Td
+(Clinical Voice Agent Architecture) Tj
+/F1 11 Tf
+0 -35 Td
+(Browser React Demo: microphone, transcript entry, speech synthesis, barge-in) Tj
+0 -24 Td
+(  -> FastAPI REST/WebSocket API) Tj
+0 -24 Td
+(  -> STT Adapter: browser/local demo transcript, production streaming STT) Tj
+0 -24 Td
+(  -> Clinical Agent: language detection, session state, intent, tool planning) Tj
+0 -24 Td
+(  -> Tool Registry: list doctors, book, reschedule, cancel, campaign outcome) Tj
+0 -24 Td
+(  -> Scheduling Engine: availability, conflict prevention, alternatives) Tj
+0 -24 Td
+(  -> Repository Boundary: in-memory demo, Redis TTL sessions, Postgres durable records) Tj
+0 -24 Td
+(  -> TTS Adapter: demo audio URL, production streaming voice synthesis) Tj
+0 -42 Td
+(Memory) Tj
+0 -22 Td
+(Session memory stores active intent, pending confirmation, language, transcript.) Tj
+0 -22 Td
+(Patient memory stores language preference, preferred doctor, notes, prior interactions.) Tj
+0 -42 Td
+(Latency) Tj
+0 -22 Td
+(Each turn logs stt_ms, language_ms, reasoning_ms, tts_ms, first_audio_ready_ms.) Tj
+0 -22 Td
+(Target budget is less than 450 ms from speech end or transcript receipt to first audio.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f
+0000000009 00000 n
+0000000058 00000 n
+0000000115 00000 n
+0000000258 00000 n
+0000001324 00000 n
+trailer
+<< /Root 1 0 R /Size 6 >>
+startxref
+1394
+%%EOF

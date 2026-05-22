@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clinical Voice Agent</title>
+    <link rel="stylesheet" href="/static/styles.css?v=3" />
+  </head>
+  <body>
+    <main class="shell">
+      <nav class="nav">
+        <div class="brand">
+          <div class="logo">+</div>
+          <div>
+            <strong>Clinical Voice Agent</strong>
+            <span>Appointment desk</span>
+          </div>
+        </div>
+        <div class="navPills">
+          <span id="health">Checking</span>
+          <span>EN · HI · TA</span>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <div class="heroCopy">
+          <span class="eyebrow">Real-time AI receptionist</span>
+          <h1>Book, reschedule, and manage clinical appointments by voice.</h1>
+          <p>Demo a patient call, inspect the tool trace, and show latency in one polished screen.</p>
+        </div>
+        <div class="heroPanel">
+          <div class="pulse"></div>
+          <span>First audio target</span>
+          <strong>&lt; 450 ms</strong>
+        </div>
+      </section>
+
+      <section class="appGrid">
+        <aside class="card patientCard">
+          <div class="cardTitle">Patient</div>
+          <label>
+            Select patient
+            <select id="patient"></select>
+          </label>
+          <div class="patientProfile">
+            <div class="avatar" id="avatar">A</div>
+            <div>
+              <strong id="patientName">Loading</strong>
+              <span id="patientPhone">-</span>
+            </div>
+          </div>
+          <div class="chips">
+            <span id="patientLanguage">EN</span>
+            <span>Context on</span>
+          </div>
+          <div class="modeSwitch">
+            <button id="inboundBtn" class="active">Inbound</button>
+            <button id="outboundBtn">Reminder</button>
+          </div>
+        </aside>
+
+        <section class="card callCard">
+          <div class="callTop">
+            <div>
+              <div class="cardTitle">Live call</div>
+              <h2 id="callTitle">Ready for patient request</h2>
+            </div>
+            <button id="bargeBtn" class="iconBtn">Stop audio</button>
+          </div>
+
+          <div class="quickPrompts">
+            <button data-prompt="Book an appointment with Dr Iyer tomorrow at 12">Book</button>
+            <button data-prompt="Change my appointment to tomorrow evening">Reschedule</button>
+            <button data-prompt="Cancel my appointment">Cancel</button>
+            <button data-prompt="नमस्ते, appointment book karna hai kal 10 baje">Hindi</button>
+            <button data-prompt="வணக்கம், நாளை appointment புக் செய்ய வேண்டும்">Tamil</button>
+          </div>
+
+          <div class="composer">
+            <textarea id="utterance">Book an appointment with Dr Iyer tomorrow at 12</textarea>
+            <div class="composerActions">
+              <button id="micBtn" class="secondaryBtn">Mic</button>
+              <button id="sendBtn" class="primaryBtn">Send turn</button>
+            </div>
+          </div>
+
+          <div class="conversation" id="conversation">
+            <article class="bubble agent">
+              <span>Agent</span>
+              Ready for the next appointment request.
+            </article>
+          </div>
+        </section>
+
+        <aside class="card insightCard">
+          <div class="cardTitle">Output</div>
+          <div class="answerBox">
+            <span>Agent response</span>
+            <strong id="answer">No response yet</strong>
+          </div>
+
+          <div class="metrics">
+            <div>
+              <span>First audio</span>
+              <strong id="latency">-</strong>
+            </div>
+            <div>
+              <span>Tools</span>
+              <strong id="toolCount">0</strong>
+            </div>
+          </div>
+
+          <div class="cardTitle compact">Latency breakdown</div>
+          <div id="latencyBreakdown" class="breakdown">
+            <span>No timing yet</span>
+          </div>
+
+          <div class="cardTitle compact">Trace</div>
+          <div id="trace" class="traceEmpty">No tool call yet</div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="/static/app.js?v=3"></script>
+  </body>
+</html>

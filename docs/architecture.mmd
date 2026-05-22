@@ -1,0 +1,11 @@
+flowchart LR
+  Browser["React Voice Demo<br/>Mic, TTS, barge-in"] --> API["FastAPI REST/WebSocket"]
+  API --> STT["STT Adapter<br/>Browser/local demo"]
+  STT --> Agent["Clinical Agent<br/>intent + tool orchestration"]
+  Agent --> Memory["Session Memory<br/>active intent, pending state"]
+  Agent --> Profile["Patient Memory<br/>language, history, notes"]
+  Agent --> Tools["Tool Registry<br/>book, reschedule, cancel, campaign"]
+  Tools --> Scheduler["Scheduling Engine<br/>conflict checks"]
+  Scheduler --> Store["Repository<br/>Redis/Postgres-ready boundary"]
+  Agent --> TTS["TTS Adapter<br/>first audio URL"]
+  TTS --> Browser

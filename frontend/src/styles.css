@@ -1,0 +1,454 @@
+:root {
+  color: #14201b;
+  background: #edf3f1;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button, select, textarea {
+  font: inherit;
+}
+
+button {
+  align-items: center;
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 14px;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.topbar {
+  align-items: center;
+  background: linear-gradient(90deg, #0f2f2a 0%, #173c5f 100%);
+  border-bottom: 1px solid #0c2825;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  min-height: 86px;
+  padding: 16px 28px;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 22px;
+  letter-spacing: 0;
+}
+
+h2 {
+  font-size: 15px;
+  margin: 18px 0 10px;
+}
+
+.topbar p {
+  color: #d5e9e2;
+  font-weight: 600;
+}
+
+.patientSummary span, .empty {
+  color: #66736a;
+}
+
+.brand {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+}
+
+.mark {
+  align-items: center;
+  background: #ffffff;
+  border-radius: 10px;
+  color: #126343;
+  display: flex;
+  height: 46px;
+  justify-content: center;
+  width: 46px;
+}
+
+.topStats {
+  display: flex;
+  gap: 10px;
+}
+
+.metric {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 10px;
+  display: flex;
+  gap: 8px;
+  min-width: 132px;
+  padding: 10px 12px;
+}
+
+.metric span {
+  font-weight: 800;
+}
+
+.metric small {
+  color: #d8ebe3;
+}
+
+.workspace {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 280px minmax(460px, 1fr) 360px;
+  padding: 20px;
+}
+
+.sidebar, .console, .inspector {
+  background: #ffffff;
+  border: 1px solid #d8e4dc;
+  border-radius: 10px;
+  box-shadow: 0 18px 42px rgba(15, 47, 42, 0.08);
+  min-height: calc(100vh - 134px);
+  padding: 16px;
+}
+
+.panelTitle {
+  align-items: center;
+  color: #18322a;
+  display: flex;
+  font-size: 13px;
+  font-weight: 800;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+label {
+  color: #516056;
+  display: grid;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+select, textarea {
+  border: 1px solid #ccd8cf;
+  border-radius: 9px;
+  color: #17201a;
+  outline: none;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.patientSummary {
+  border-bottom: 1px solid #e4ebe5;
+  border-top: 1px solid #e4ebe5;
+  display: grid;
+  gap: 6px;
+  margin: 18px 0;
+  padding: 18px 0;
+}
+
+.languageTag {
+  align-items: center;
+  background: #eef7f2;
+  border: 1px solid #d4eadc;
+  border-radius: 999px;
+  color: #126343;
+  display: inline-flex;
+  gap: 6px;
+  padding: 5px 9px;
+  width: fit-content;
+}
+
+.mode {
+  display: grid;
+  gap: 10px;
+}
+
+.mode button, .secondary {
+  background: #eef2ef;
+  color: #26332a;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.mode button.active {
+  background: #126343;
+  color: #ffffff;
+}
+
+.secondary {
+  margin-top: 10px;
+}
+
+.guardrails {
+  border-top: 1px solid #e4ebe5;
+  color: #385146;
+  display: grid;
+  font-size: 13px;
+  gap: 10px;
+  margin-top: 18px;
+  padding-top: 18px;
+}
+
+.guardrails div {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.guardrails svg {
+  color: #126343;
+}
+
+.callHeader {
+  align-items: flex-start;
+  background: #f8fbf9;
+  border: 1px solid #e1eae4;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px;
+}
+
+.callHeader h2 {
+  font-size: 18px;
+  margin: 0 0 4px;
+}
+
+.callHeader p {
+  color: #66736a;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.callBadge {
+  align-items: center;
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 800;
+  gap: 7px;
+  padding: 8px 11px;
+  text-transform: capitalize;
+}
+
+.callBadge.inbound {
+  background: #e8f1ff;
+  color: #173b70;
+}
+
+.callBadge.outbound {
+  background: #fff4df;
+  color: #7a4b10;
+}
+
+.samples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 14px 0;
+}
+
+.samples button {
+  background: #f5f8f6;
+  border: 1px solid #d9e5dd;
+  color: #31463c;
+  font-size: 13px;
+  font-weight: 750;
+  min-height: 34px;
+  padding: 0 12px;
+}
+
+.samples button:hover {
+  background: #e8f4ed;
+  border-color: #b9d8c4;
+}
+
+.composer {
+  border-bottom: 1px solid #e4ebe5;
+  display: grid;
+  gap: 12px;
+  padding-bottom: 16px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.actions button {
+  background: #1d5fb8;
+  color: #ffffff;
+}
+
+.actions button:first-child {
+  background: #ebf1fa;
+  color: #173b70;
+}
+
+.conversation {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.bubble {
+  border-radius: 10px;
+  line-height: 1.45;
+  max-width: 78%;
+  padding: 13px 14px;
+}
+
+.bubble span {
+  color: #536258;
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.bubble.patient {
+  background: #f0f4f2;
+  border: 1px solid #dfe8e2;
+}
+
+.bubble.agent {
+  background: #e8f1ff;
+  border: 1px solid #ccdcf5;
+  margin-left: auto;
+}
+
+.summaryCard {
+  background: #f8fbf9;
+  border: 1px solid #e1eae4;
+  border-radius: 10px;
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 14px;
+}
+
+.summaryCard span {
+  color: #66736a;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.summaryCard strong {
+  line-height: 1.4;
+}
+
+.trace {
+  border: 1px solid #e1e8e2;
+  border-radius: 10px;
+  display: grid;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding: 12px;
+}
+
+.trace span {
+  color: #66736a;
+  font-size: 12px;
+}
+
+pre {
+  background: #101b18;
+  border-radius: 10px;
+  color: #d8f5dd;
+  margin: 0;
+  max-height: 220px;
+  overflow: auto;
+  padding: 10px;
+  white-space: pre-wrap;
+}
+
+.latency {
+  min-height: 120px;
+}
+
+.memoryCard {
+  align-items: center;
+  background: #f8fbf9;
+  border: 1px solid #e1eae4;
+  border-radius: 10px;
+  color: #34483e;
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+}
+
+.memoryCard span {
+  background: #edf5f0;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 5px 9px;
+}
+
+.spin {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1050px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .sidebar, .console, .inspector {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar, .workspace {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .topStats, .callHeader, .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .metric, .actions button {
+    width: 100%;
+  }
+
+  .bubble {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,523 @@
+:root {
+  color: #15201b;
+  background: #eef4f2;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button, select, textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+.shell {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 20px;
+  max-width: 1320px;
+}
+
+.brand {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+
+.logo {
+  align-items: center;
+  background: #0c6b4f;
+  border-radius: 14px;
+  color: #fff;
+  display: flex;
+  font-size: 28px;
+  font-weight: 900;
+  height: 48px;
+  justify-content: center;
+  width: 48px;
+}
+
+.brand strong {
+  display: block;
+  font-size: 18px;
+}
+
+.brand span, .hero p, label, .cardTitle, .answerBox span, .metrics span {
+  color: #63726b;
+}
+
+.navPills {
+  display: flex;
+  gap: 10px;
+}
+
+.navPills span {
+  background: #fff;
+  border: 1px solid #d9e5df;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 8px 12px;
+}
+
+.hero {
+  align-items: stretch;
+  background: linear-gradient(110deg, #123b35 0%, #173d63 100%);
+  border-radius: 22px;
+  color: #fff;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  margin: 0 auto 20px;
+  max-width: 1320px;
+  overflow: hidden;
+  padding: 30px;
+}
+
+.eyebrow {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 14px;
+  padding: 7px 10px;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 4vw, 54px);
+  letter-spacing: 0;
+  line-height: 1.02;
+  margin: 0;
+  max-width: 860px;
+}
+
+.hero p {
+  color: #d5e9e2;
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 16px 0 0;
+  max-width: 620px;
+}
+
+.heroPanel {
+  align-content: center;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+  padding: 22px;
+}
+
+.heroPanel span {
+  color: #d5e9e2;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.heroPanel strong {
+  font-size: 34px;
+}
+
+.pulse {
+  background: #72e5a8;
+  border-radius: 999px;
+  box-shadow: 0 0 0 8px rgba(114, 229, 168, 0.16);
+  height: 14px;
+  width: 14px;
+}
+
+.appGrid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 280px minmax(430px, 1fr) 360px;
+  margin: 0 auto;
+  max-width: 1320px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #d9e5df;
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(18, 59, 53, 0.09);
+  padding: 18px;
+}
+
+.cardTitle {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.cardTitle.compact {
+  margin-top: 18px;
+}
+
+label {
+  display: grid;
+  font-size: 13px;
+  font-weight: 800;
+  gap: 8px;
+}
+
+select, textarea {
+  border: 1px solid #cddbd4;
+  border-radius: 12px;
+  outline: none;
+  padding: 11px 12px;
+  width: 100%;
+}
+
+.patientProfile {
+  align-items: center;
+  border-bottom: 1px solid #e5eee8;
+  border-top: 1px solid #e5eee8;
+  display: flex;
+  gap: 12px;
+  margin: 18px 0;
+  padding: 18px 0;
+}
+
+.avatar {
+  align-items: center;
+  background: #e8f4ed;
+  border-radius: 16px;
+  color: #0c6b4f;
+  display: flex;
+  font-size: 22px;
+  font-weight: 900;
+  height: 54px;
+  justify-content: center;
+  width: 54px;
+}
+
+.patientProfile strong, .patientProfile span {
+  display: block;
+}
+
+.patientProfile span {
+  color: #63726b;
+  margin-top: 4px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.chips span {
+  background: #edf7f2;
+  border: 1px solid #d1eadb;
+  border-radius: 999px;
+  color: #0c6b4f;
+  font-size: 12px;
+  font-weight: 900;
+  padding: 7px 9px;
+}
+
+.modeSwitch {
+  background: #edf3f0;
+  border-radius: 14px;
+  display: grid;
+  gap: 6px;
+  grid-template-columns: 1fr 1fr;
+  padding: 6px;
+}
+
+.modeSwitch button {
+  background: transparent;
+  border-radius: 10px;
+  color: #496057;
+  font-weight: 900;
+  min-height: 38px;
+}
+
+.modeSwitch button.active {
+  background: #fff;
+  color: #0c6b4f;
+  box-shadow: 0 8px 20px rgba(18, 59, 53, 0.1);
+}
+
+.callTop {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.callTop h2 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.iconBtn, .secondaryBtn {
+  background: #eef4f2;
+  border-radius: 12px;
+  color: #25433a;
+  font-weight: 900;
+  min-height: 42px;
+  padding: 0 14px;
+}
+
+.quickPrompts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0;
+}
+
+.quickPrompts button {
+  background: #f6faf8;
+  border: 1px solid #dce8e1;
+  border-radius: 999px;
+  color: #2d493f;
+  font-size: 13px;
+  font-weight: 900;
+  min-height: 36px;
+  padding: 0 13px;
+}
+
+textarea {
+  min-height: 118px;
+  resize: vertical;
+}
+
+.composerActions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.primaryBtn {
+  background: #1769c2;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 900;
+  min-height: 42px;
+  padding: 0 18px;
+}
+
+.conversation {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.bubble {
+  border-radius: 16px;
+  line-height: 1.45;
+  max-width: 78%;
+  padding: 14px;
+}
+
+.bubble span {
+  color: #64746c;
+  display: block;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.bubble.patient {
+  background: #f0f5f3;
+  border: 1px solid #dfe9e3;
+}
+
+.bubble.agent {
+  background: #e8f1ff;
+  border: 1px solid #cadcf5;
+  margin-left: auto;
+}
+
+.answerBox {
+  background: #f7fbf9;
+  border: 1px solid #dfe9e3;
+  border-radius: 16px;
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+}
+
+.answerBox span, .metrics span {
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.answerBox strong {
+  line-height: 1.4;
+}
+
+.metrics {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  margin: 14px 0;
+}
+
+.metrics div {
+  background: #14201b;
+  border-radius: 16px;
+  color: #fff;
+  display: grid;
+  gap: 6px;
+  padding: 14px;
+}
+
+.metrics span {
+  color: #b9ccc3;
+}
+
+.metrics strong {
+  font-size: 24px;
+}
+
+.traceEmpty, .traceItem, .breakdown {
+  background: #f7fbf9;
+  border: 1px solid #dfe9e3;
+  border-radius: 14px;
+  color: #63726b;
+  padding: 14px;
+}
+
+.traceList {
+  display: grid;
+  gap: 12px;
+}
+
+.traceItem {
+  color: #15201b;
+  display: grid;
+  gap: 12px;
+}
+
+.traceHead {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  text-transform: capitalize;
+}
+
+.traceHead span {
+  background: #e8f4ed;
+  border-radius: 999px;
+  color: #0c6b4f;
+  font-size: 12px;
+  font-weight: 900;
+  padding: 5px 8px;
+}
+
+.traceItem dl {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.traceItem dl div, .breakdown div {
+  align-items: center;
+  border-bottom: 1px solid #e5eee8;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 8px;
+}
+
+.traceItem dl div:last-child, .breakdown div:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.traceItem dt, .breakdown span, .altBlock span {
+  color: #63726b;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.traceItem dd {
+  font-weight: 800;
+  margin: 0;
+  max-width: 190px;
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+
+.breakdown {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.breakdown strong {
+  color: #15201b;
+}
+
+.altBlock {
+  background: #fff;
+  border: 1px solid #e5eee8;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.altBlock ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.altBlock li {
+  color: #2d493f;
+  font-weight: 750;
+  margin: 4px 0;
+}
+
+@media (max-width: 1100px) {
+  .hero, .appGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .shell {
+    padding: 14px;
+  }
+
+  .nav, .callTop, .composerActions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero {
+    padding: 22px;
+  }
+
+  .bubble {
+    max-width: 100%;
+  }
+}
