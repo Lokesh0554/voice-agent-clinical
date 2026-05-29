@@ -30,8 +30,8 @@ The project covers the main assignment requirements:
 - Session memory plus cross-session patient preferences.
 - Per-turn latency breakdown from speech end/transcript receipt to first audio URL.
 - Architecture diagram in [docs/architecture.pdf](docs/architecture.pdf) and Mermaid source in [docs/architecture.mmd](docs/architecture.mmd).
-- Loom recording guide in [docs/loom-walkthrough.md](docs/loom-walkthrough.md).
-- Demo output checklist in [docs/demo-output.md](docs/demo-output.md).
+  
+
 
 ## Workflow Explanation
 
